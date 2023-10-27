@@ -6,16 +6,14 @@ name: Python application
 on:
   schedule:
     - cron: "50 21 * * *"
-  workflow_dispatch:
+    - cron: "20 0 * * *"
 
 permissions:
   contents: read
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python 3.10
