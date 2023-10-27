@@ -23,7 +23,7 @@ def main():
     data = {
         "user": user,
         "password": password,
-        'step': 1111,
+        'step': 2222,
         'ver': 'cxydzsv3.1',
     }
     new_data = urllib.parse.urlencode(data)
