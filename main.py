@@ -23,7 +23,7 @@ def main():
     data = {
         "user": user,
         "password": password,
-        'step': 2222,
+        'step': step,
         'ver': 'cxydzsv3.1',
     }
     now = datetime.datetime.utcnow();
