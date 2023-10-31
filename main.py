@@ -1,3 +1,4 @@
+import datetime
 import urllib.request
 import urllib.parse
 import random
@@ -5,7 +6,7 @@ import random
 # 步数默认96000 至97999 随机数，可以自行修改。
 # 接口限制，最高不得超过 98000。
 
-step = random.randint(8500,11000)
+step = random.randint(8500,10000)
 # 账号
 user = "1585962327@qq.com"
 # 密码
@@ -26,9 +27,9 @@ def main():
         'step': step,
         'ver': 'cxydzsv3.1',
     }
-    now = datetime.datetime.utcnow();
+    now = datetime.datetime.utcnow()
     if now.hour >= 16:
-        data['step'] = 3
+        data['step'] = 0
     new_data = urllib.parse.urlencode(data)
     url = base_url + new_data
     request = urllib.request.Request(url=url, headers=headers)
