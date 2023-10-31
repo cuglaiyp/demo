@@ -8,9 +8,6 @@ on:
     - cron: "50 11 * * *"
     - cron: "30 16 * * *"
 
-permissions:
-  contents: read
-
 jobs:
   build:
     runs-on: ubuntu-latest
